@@ -2,9 +2,11 @@ GEM
   remote: https://rubygems.org/
   specs:
     erubis (2.7.0)
+    pg (0.18.2)
     rack (1.6.4)
     roda (2.1.0)
       rack
+    sequel (4.21.0)
     tilt (2.0.1)
 
 PLATFORMS
@@ -12,7 +14,9 @@ PLATFORMS
 
 DEPENDENCIES
   erubis (~> 2.7.0)
+  pg (~> 0.18.1)
   roda (~> 2.1.0)
+  sequel (~> 4.21.0)
   tilt (~> 2.0.1)
 
 BUNDLED WITH
