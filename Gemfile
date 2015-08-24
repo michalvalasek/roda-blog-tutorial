@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
 gem "roda", "~> 2.1.0"
+gem "bcrypt", "~> 3.1.10"
 
 # templating
 gem "tilt", "~> 2.0.1"
