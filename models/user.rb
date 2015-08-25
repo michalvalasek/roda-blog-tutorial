@@ -2,6 +2,8 @@ class User < Sequel::Model
 
   attr_accessor :password, :password_confirmation
 
+  one_to_many :posts, on_delete: :cascade
+
   def validate
     super
     validates_presence :password
