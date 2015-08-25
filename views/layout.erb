@@ -23,6 +23,17 @@
           <li><a href="/">Home</a></li>
           <li><a href="/about">About</a></li>
           <li><a href="/contact">Contact</a></li>
+          <% if session[:user_id] %>
+            <li><a href="/users">Users</a></li>
+            <li>
+              <form action="/logout" method="post" class="navbar-form">
+                <%= csrf_tag %>
+                <input type="submit" value="Logout" class="btn btn-link">
+              </form>
+            </li>
+          <% else %>
+            <li><a href="/login">Login</a></li>
+          <% end %>
         </ul>
       </div>
     </nav>
