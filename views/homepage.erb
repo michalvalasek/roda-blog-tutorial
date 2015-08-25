@@ -1,3 +1,9 @@
-<p>
-  Wellcome to the Roda tutorial app!
-</p>
+<% @posts.each do |post| %>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <h2><a href="/posts/<%= post.id %>"><%= post.title %></a></h2>
+      <p class="text-muted">by <%= post.user.name %> on <%= post.created_at.strftime("%Y-%m-%d") %></p>
+      <%= post.content %>
+    </div>
+  </div>
+<% end %>
